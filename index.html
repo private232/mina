@@ -37,7 +37,7 @@
             width: 100%;
             max-width: 900px;
             animation: fadeIn 2s ease-in-out;
-            padding: 0 15px; /* إضافة مسافة على الجانبين للهواتف */
+            padding: 0 15px;
         }
 
         h1 {
@@ -70,7 +70,7 @@
         .video-container {
             position: relative;
             width: 100%;
-            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            padding-top: 56.25%; /* 16:9 Aspect Ratio for responsive video */
             background-color: #000;
             border-radius: 15px;
             overflow: hidden;
@@ -82,13 +82,13 @@
             transform: scale(1.02);
         }
 
-        video {
+        .video-container iframe {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            border: 0;
         }
 
         /* Responsive Design - Media Queries */
@@ -96,15 +96,12 @@
             h1 {
                 font-size: 2.5rem;
             }
-
             h2 {
                 font-size: 1rem;
             }
-
             h3 {
                 font-size: 1.2rem;
             }
-
             .container {
                 padding: 0 10px;
             }
@@ -114,7 +111,6 @@
             h1 {
                 font-size: 2rem;
             }
-
             h2 {
                 font-size: 0.9rem;
             }
@@ -145,10 +141,7 @@
         <h3>رهط هتلر</h3>
         
         <div class="video-container">
-            <video controls>
-                <source src="vid.mp4" type="video/mp4">
-                متصفحك لا يدعم تشغيل الفيديو.
-            </video>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/siJ93E8pcJ8?si=V3LF9y-4MXys9-bk&controls=0&showinfo=0&rel=0&modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </div>
 </body>
